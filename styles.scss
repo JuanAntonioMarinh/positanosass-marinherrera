@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$backgroundpositano: #1f1d1d;
+$color1: #a411b8;
+$color2: #31d1bc;
+$positanofont: 'Qwigley', cursive;
+
+
+
+body{
+    background-color: $backgroundpositano;
+}
+
+.logoframe{
+    padding: 20px;
+    text-align: center;
+}
+
+.logo{
+    height: 430px;
+    width: 450px;
+    padding: 0px;
+}
+
+.logo:hover{
+    box-shadow: 0px 0px 5px $color1, 0px 0px 10px $color2, 0px 0px 25px $color1;
+    border-radius: 50%;
+    transition: all 3s;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-image: linear-gradient(to left,
+    #1f1d1d 5%, rgba(165, 17, 184, 0.185));
+    border: 0px groove $color1;
+    
+    }
+
+    li {
+    float: left;
+    }
+
+    li a {
+    font-size: 32px;
+    font-family: $positanofont;
+    display: block;
+    color: $backgroundpositano;
+    text-align: center;
+    padding: 18px 24px;
+    text-decoration: none;
+    }
+
+    ul:hover{
+        border-color: $color2;
+        box-shadow: 0px 0px 20px $color2;
+        transition: 1s;
+    }
+
+    li a:hover {
+    color: $color2;
+    transition: all 2s;
+    }
+
+
+    /* Mira que haciendo nesting no me detecta las propiedades declaradas para grid ni para flex, lo copio comentado para que veas aplicado el ejercicio:
+    .mainframe{
+    height: 70vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 2fr 1fr;
+    margin: 10px;
+    padding: 10px;
+        .maininside{
+    border: 1px solid $color1;
+    margin: 0;
+    border-radius: 7px;
+    opacity: 0.5;
+}
+}*/
+
+
+.mainframe{
+    height: 70vh;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 2fr 1fr;
+    margin: 10px;
+    padding: 10px;
+}
+
+.maininside{
+    border: 1px solid $color1;
+    margin: 0;
+    border-radius: 7px;
+    opacity: 0.5;
+}
+
+.maininside:hover{
+    border-color: $color2;
+    opacity: 1;
+}
+
+.inner1{
+    background-image: url(./multimedia/outdoors1.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: 100%;
+    width: 100%;
+    border: 2px solid $color1;
+    margin: 0px;
+    padding: 40px;
+}
+
+    .inner2 {
+    background-image: url(./multimedia/indoors2.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    border: 2px solid $color1;
+    margin: 0px;
+    padding: 40px;
+    }
+
+    .inner3 {
+    background-image: url(./multimedia/outdoors3.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    height: 100%;
+    width: 100%;
+    border: 2px solid $color1;
+    margin: 0px;
+    padding: 40px;
+    }
+
+    .inner4 {
+    background-image: url(./multimedia/indoors8.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    border: 2px solid $color1;
+    margin: 0px;
+    padding: 40px;
+    }
+
+    .under{
+        background-color: $backgroundpositano;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        
+    }
+    
+    .social{
+        color:$color2;
+        padding: 50px;
+        font-size: 80px;
+    }
+    
+    .social:hover{
+        color: $color1;
+    }
+    
+    @media only screen and (max-width: 720px){
+        .social{
+            font-size: 30px;
+            padding: 20px;
+        }
+    }    
+
