@@ -1,10 +1,49 @@
-@import url("https://fonts.googleapis.com/css2?family=Qwigley&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/*
+
+mixin
+
+@mixin fonts{
+    $positanofont;
+    font-size: 3rem;
+    color: $color1
+}
+
+p{
+    @include fonts;
+}
+
+Map, map-get
+$colors: (
+    primary: #a411b8,
+    secundary: #31d1bc,
+    backgrounds: #1f1d1d,
+);
+
+
+body{
+    background-color: map-get($colors, $backgrounds);
+}
+
+extend 
+
+article{
+    background-color: $color1;
+}
+
+div{
+    @extend artcicle;
+    background-color: lighten (25%)
+}
+
+
+*/
 body {
   background-color: #1f1d1d;
 }
@@ -23,16 +62,15 @@ body {
 .logo:hover {
   box-shadow: 0px 0px 5px #a411b8, 0px 0px 10px #31d1bc, 0px 0px 25px #a411b8;
   border-radius: 50%;
-  transition: all 3s;
+  transition: all 2s;
 }
 
-ul {
+.navigation {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-image: linear-gradient(to left, #1f1d1d 5%, rgba(165, 17, 184, 0.185));
-  border: 0px groove #a411b8;
+  background-image: linear-gradient(to right, #1f1d1d 23%, rgba(165, 17, 184, 0.185));
 }
 
 li {
@@ -40,46 +78,82 @@ li {
 }
 
 li a {
-  font-size: 32px;
-  font-family: "Qwigley", cursive;
   display: block;
-  color: #1f1d1d;
+  color: #a411b8;
   text-align: center;
-  padding: 18px 24px;
+  padding: 14px 16px;
   text-decoration: none;
+  font-family: "Nothing You Could Do", cursive;
+  font-size: 2rem;
 }
 
-ul:hover {
-  border-color: #31d1bc;
-  box-shadow: 0px 0px 20px #31d1bc;
-  transition: 1s;
-}
-
-li a:hover {
+li a:hover:not(.active) {
   color: #31d1bc;
-  transition: all 2s;
 }
 
-/* Mira que haciendo nesting no me detecta las propiedades declaradas para grid ni para flex, lo copio comentado para que veas aplicado el ejercicio:
-    .mainframe{
-    height: 70vh;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 1fr, 2fr, 1fr;
-    grid-template-rows: 2fr 1fr;
-    margin: 10px;
-    padding: 10px;
-        .maininside{
-    border: 1px solid $color1;
-    margin: 0;
-    border-radius: 7px;
-    opacity: 0.5;
+.active {
+  color: #31d1bc;
 }
-}*/
+
+.maintext {
+  margin: 1rem;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr, 1fr;
+  grid-template-rows: 2fr, 1fr, 1fr, 2fr;
+  font-family: "Nothing You Could Do", cursive;
+  justify-content: center;
+}
+.maintext h1 {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  background-color: #524e4e;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  font-size: 4rem;
+  letter-spacing: 1px;
+  color: #1f1d1d;
+}
+.maintext .pharagraph1 {
+  border-radius: 20px;
+  justify-content: center;
+  color: #1f1d1d;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background-color: #524e4e;
+}
+.maintext .pharagraph2 {
+  border-radius: 20px;
+  color: #1f1d1d;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background-color: #524e4e;
+}
+.maintext .pharagraph3 {
+  border-radius: 20px;
+  color: #1f1d1d;
+  grid-column: 1/3;
+  grid-row: 3/4;
+  padding: 1rem;
+  padding-top: 0.5rem;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  background-color: #524e4e;
+}
+
 .mainframe {
   height: 70vh;
   max-width: 100%;
   display: grid;
+  gap: 1rem;
   grid-template-columns: 1fr, 2fr, 1fr;
   grid-template-rows: 2fr 1fr;
   margin: 10px;
@@ -89,7 +163,6 @@ li a:hover {
 .maininside {
   border: 1px solid #a411b8;
   margin: 0;
-  border-radius: 7px;
   opacity: 0.5;
 }
 
@@ -106,7 +179,7 @@ li a:hover {
   grid-row: 1/3;
   height: 100%;
   width: 100%;
-  border: 2px solid #a411b8;
+  border: 2px solid;
   margin: 0px;
   padding: 40px;
 }
@@ -119,7 +192,7 @@ li a:hover {
   grid-row: 1/2;
   height: 100%;
   width: 100%;
-  border: 2px solid #a411b8;
+  border: 2px solid;
   margin: 0px;
   padding: 40px;
 }
@@ -132,7 +205,7 @@ li a:hover {
   grid-row: 1/3;
   height: 100%;
   width: 100%;
-  border: 2px solid #a411b8;
+  border: 2px solid;
   margin: 0px;
   padding: 40px;
 }
@@ -145,7 +218,7 @@ li a:hover {
   grid-row: 2/3;
   height: 100%;
   width: 100%;
-  border: 2px solid #a411b8;
+  border: 2px solid;
   margin: 0px;
   padding: 40px;
 }
@@ -171,5 +244,20 @@ li a:hover {
   .social {
     font-size: 30px;
     padding: 20px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .logo {
+    height: 210px;
+    width: 250px;
+    padding: 0px;
+  }
+}
+@media only screen and (min-width: 580) {
+  ul {
+    flex-flow: column;
+  }
+  li {
+    margin: 10px;
   }
 }/*# sourceMappingURL=styles.css.map */

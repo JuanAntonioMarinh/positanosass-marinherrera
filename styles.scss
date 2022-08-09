@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Qwigley&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap');
 
 *{
     margin: 0;
@@ -7,11 +7,50 @@
 }
 
 $backgroundpositano: #1f1d1d;
+$backgroundtext: #524e4e;
 $color1: #a411b8;
 $color2: #31d1bc;
-$positanofont: 'Qwigley', cursive;
+$positanofont: 'Nothing You Could Do', cursive;
+
+/*
+
+mixin
+
+@mixin fonts{
+    $positanofont;
+    font-size: 3rem;
+    color: $color1
+}
+
+p{
+    @include fonts;
+}
+
+Map, map-get
+$colors: (
+    primary: #a411b8,
+    secundary: #31d1bc,
+    backgrounds: #1f1d1d,
+);
 
 
+body{
+    background-color: map-get($colors, $backgrounds);
+}
+
+extend 
+
+article{
+    background-color: $color1;
+}
+
+div{
+    @extend artcicle;
+    background-color: lighten (25%)
+}
+
+
+*/
 
 body{
     background-color: $backgroundpositano;
@@ -31,68 +70,104 @@ body{
 .logo:hover{
     box-shadow: 0px 0px 5px $color1, 0px 0px 10px $color2, 0px 0px 25px $color1;
     border-radius: 50%;
-    transition: all 3s;
+    transition: all 2s;
 }
 
-ul {
+.navigation{
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-image: linear-gradient(to left,
-    #1f1d1d 5%, rgba(165, 17, 184, 0.185));
-    border: 0px groove $color1;
-    
-    }
+    background-image: linear-gradient(to right,
+    #1f1d1d 23%, rgba(165, 17, 184, 0.185)
+    );
+}
 
+    
     li {
     float: left;
     }
 
     li a {
-    font-size: 32px;
-    font-family: $positanofont;
     display: block;
-    color: $backgroundpositano;
+    color: $color1;
     text-align: center;
-    padding: 18px 24px;
+    padding: 14px 16px;
     text-decoration: none;
+    font-family: $positanofont;
+    font-size: 2rem;
     }
 
-    ul:hover{
-        border-color: $color2;
-        box-shadow: 0px 0px 20px $color2;
-        transition: 1s;
-    }
-
-    li a:hover {
+    li a:hover:not(.active) {
     color: $color2;
-    transition: all 2s;
+    }
+
+    .active {
+    color: $color2;
     }
 
 
-    /* Mira que haciendo nesting no me detecta las propiedades declaradas para grid ni para flex, lo copio comentado para que veas aplicado el ejercicio:
-    .mainframe{
-    height: 70vh;
-    max-width: 100%;
+.maintext{
+    margin: 1rem;
     display: grid;
-    grid-template-columns: 1fr, 2fr, 1fr;
-    grid-template-rows: 2fr 1fr;
-    margin: 10px;
-    padding: 10px;
-        .maininside{
-    border: 1px solid $color1;
-    margin: 0;
-    border-radius: 7px;
-    opacity: 0.5;
-}
-}*/
+    gap: 2rem;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 2fr, 1fr, 1fr, 2fr;
+    font-family: $positanofont;
+    justify-content: center;
 
+    h1{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        background-color: $backgroundtext;
+        padding: 1rem;
+        padding-top: 0.5rem;
+        font-size: 4rem;
+        letter-spacing: 1px;
+        color: $backgroundpositano;
+    }
+
+    .pharagraph1{
+        border-radius: 20px;
+        justify-content: center;
+        color: $backgroundpositano;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        padding: 1rem;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        background-color: $backgroundtext;
+    }
+    .pharagraph2{
+        border-radius: 20px;
+        color: $backgroundpositano;
+        grid-column: 2/3;
+        grid-row: 2/3;
+        padding: 1rem;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        background-color: $backgroundtext;;
+    }
+    .pharagraph3{
+        border-radius: 20px;
+        color: $backgroundpositano;
+        grid-column: 1/3;
+        grid-row: 3/4;
+        padding: 1rem;
+        padding-top: 0.5rem;
+        font-size: 2rem;
+        letter-spacing: 1px;
+        background-color: $backgroundtext;
+    }
+}
 
 .mainframe{
     height: 70vh;
     max-width: 100%;
     display: grid;
+    gap: 1rem;
     grid-template-columns: 1fr, 2fr, 1fr;
     grid-template-rows: 2fr 1fr;
     margin: 10px;
@@ -102,7 +177,6 @@ ul {
 .maininside{
     border: 1px solid $color1;
     margin: 0;
-    border-radius: 7px;
     opacity: 0.5;
 }
 
@@ -119,7 +193,7 @@ ul {
     grid-row: 1/3;
     height: 100%;
     width: 100%;
-    border: 2px solid $color1;
+    border: 2px solid;
     margin: 0px;
     padding: 40px;
 }
@@ -132,7 +206,7 @@ ul {
     grid-row: 1/2;
     height: 100%;
     width: 100%;
-    border: 2px solid $color1;
+    border: 2px solid;
     margin: 0px;
     padding: 40px;
     }
@@ -145,7 +219,7 @@ ul {
     grid-row: 1/3;
     height: 100%;
     width: 100%;
-    border: 2px solid $color1;
+    border: 2px solid;
     margin: 0px;
     padding: 40px;
     }
@@ -158,7 +232,7 @@ ul {
     grid-row: 2/3;
     height: 100%;
     width: 100%;
-    border: 2px solid $color1;
+    border: 2px solid;
     margin: 0px;
     padding: 40px;
     }
@@ -187,4 +261,22 @@ ul {
             padding: 20px;
         }
     }    
+
+    @media only screen and (max-width: 840px){
+        .logo{
+            height: 210px;
+            width: 250px;
+            padding: 0px;
+        }
+        
+    }
+
+    @media only screen and(min-width:580){
+        ul{
+            flex-flow: column;
+        }
+        li{
+            margin: 10px;
+        }
+    }
 
