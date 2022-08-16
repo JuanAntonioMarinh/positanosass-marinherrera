@@ -7,7 +7,13 @@
 }
 
 $backgroundpositano: #1f1d1d;
+$smallbackground: #808080;
 $backgroundtext: #524e4e;
+$purpletone: rgba(165, 17, 184, 0.185);
+$positanogradient1: linear-gradient(to right,
+#1f1d1d 83%, rgba(165, 17, 184, 0.185));
+$positanogradient2: linear-gradient(to right,
+#1f1d1d 83%, rgba(29, 122, 110, 0.871));
 $color1: #a411b8;
 $color2: #31d1bc;
 $positanofont: 'Nothing You Could Do', cursive;
@@ -52,69 +58,569 @@ div{
 
 */
 
+
+
 body{
     background-color: $backgroundpositano;
 }
 
+/*logo*/
+
 .logoframe{
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 1;
+    justify-content: space-between;
+    padding: 0;
+    text-align: left;
+    background-image: $positanogradient1;
 }
+
 
 .logo{
-    height: 430px;
-    width: 450px;
-    padding: 0px;
+    background-image: url(/multimedia/logogreencurs.jpg);
+    background-size: cover;
+    height: 200px;
+    width: 220px;
+    padding: 10px;
+    margin: 10px;
 }
 
-.logo:hover{
-    box-shadow: 0px 0px 5px $color1, 0px 0px 10px $color2, 0px 0px 25px $color1;
-    border-radius: 50%;
-    transition: all 2s;
+.logo:hover {
+    border-color: $color1;
+
 }
+
+/*banner*/
+
+.banner{
+    width: 300px;
+    height: auto;
+    padding-top: 40px;
+    margin: 20px;
+    margin-left: 0;
+    justify-items: center;
+}
+
+.banner-text{
+    font-family: $positanofont;
+    font-size: 0.8rem;
+    color: $color1;
+}
+
+/*navbar menu*/
 
 .navigation{
     list-style-type: none;
-    margin: 0;
+    margin-top: 3rem;
+    margin-right: 35px;
+    margin-bottom: 10px;
     padding: 0;
-    overflow: hidden;
-    background-image: linear-gradient(to right,
-    #1f1d1d 23%, rgba(165, 17, 184, 0.185)
-    );
+    height: 100%;
+    width: 10%;
 }
 
     
     li {
-    float: left;
+    align-items: right;
     }
 
     li a {
-    display: block;
-    color: $color1;
+
+    color: $smallbackground;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-family: $positanofont;
-    font-size: 2rem;
     }
 
+    span{
+        padding: 12px;
+    }
+    
     li a:hover:not(.active) {
     color: $color2;
+    transform: scale(1.1);
+    opacity: 1;
     }
 
     .active {
     color: $color2;
+    text-decoration: underline;
+    opacity: 1;
+    }
+
+    .material-symbols-outlined{
+        font-size: 32px;
     }
 
 
+/*index*/
+
+.mainframe{
+    height: 100vh auto;
+    max-width: 100%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr, 2fr, 1fr;
+    grid-template-rows: 2fr 1fr;
+    margin: 0;
+    padding: 10px;
+    background-image:$positanogradient1;
+}
+
+
+
+.maininside{
+    border: 1px solid;
+    margin: 0;
+    opacity: 0.5;
+}
+
+.maininside:hover{
+    border-color: $color2;
+    transition: 1s;
+    border-radius: 8px;
+    opacity: 1;
+    transform: scale(1.05);
+
+}
+
+.inner1{
+    background-image: url(./multimedia/indoors3.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 1/2;
+    grid-row: 1/3;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding-top: 100px;
+    padding: 40px;
+}
+
+    .inner2 {
+    background-image: url(./multimedia/indoors2.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+    }
+
+    .inner3 {
+    background-image: url(./multimedia/outdoors3.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 3/4;
+    grid-row: 1/3;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+    }
+
+    .inner4 {
+    background-image: url(./multimedia/indoors8.jpg);
+    background-position: center;
+    background-size: cover;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 40px;
+    }
+
+
+
+/*products*/
+
+.product-background {
+    background-image: $positanogradient1;
+    display: grid;
+    padding: 64px;
+    grid-template-columns: 1fr, 1fr;
+    grid-template-rows: 1fr, 1fr;
+}
+
+.card1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    border-radius: 6px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 100%;
+    min-height: 200px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-image: url(/multimedia/indoors6.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.info1{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: $backgroundtext;
+    background-size: cover;
+    background-position: bottom;
+    transform: translateY(100%)
+        translateY(-88px)
+        translateZ(0);
+    transition: transform 0.7s ease-out;
+}
+
+.info1:before{
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-color: $backgroundpositano;
+    filter: blur(10px);
+    background-size: cover;
+    opacity: 0.25;
+    transform: translateY(-100%)
+        translateY(88px)
+        translateZ(0);
+    transition: transform 0.5s ease-out;
+}
+
+.card1:hover .info1,
+.card1:hover .info1:before {
+    transform: translateY(0) translateZ(0);
+    border: 1px solid $color2;
+    background-color: $backgroundpositano;
+}
+
+.title1 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color2;
+    font-family: $positanofont;
+    text-align: center;
+}
+
+.description1 {
+    margin: 0;
+    padding: 3rem 24px 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $color2;
+    font-family: $positanofont;
+}
+
+
+
+
+.card2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    border-radius: 6px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 100%;
+    min-height: 200px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-image: url(/multimedia/outdoors.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.info2{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: $backgroundtext;
+    transform: translateY(100%)
+        translateY(-88px)
+        translateZ(0);
+    transition: transform 0.7s ease-out;
+}
+
+.info2:before{
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-image: url(/multimedia/outdoors1.jpg);
+    filter: blur(10px);
+    background-size: cover;
+    opacity: 0.25;
+    transform: translateY(-100%)
+        translateY(88px)
+        translateZ(0);
+    transition: transform 0.5s ease-out;
+}
+
+.card2:hover .info2,
+.card2:hover .info2:before {
+    transform: translateY(0) translateZ(0);
+    border: 1px solid $color2;
+    background-color: $backgroundpositano;
+}
+
+.title2 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color2;
+    font-family: $positanofont;
+    text-align: center;
+}
+
+.description2 {
+    margin: 0;
+    padding: 0 24px 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $color2;
+    font-family: $positanofont;
+}
+
+
+
+.card3{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    border-radius: 6px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 100%;
+    min-height: 200px;
+    box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+        0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+        0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+    background-image: url(/multimedia/indoors9.jpg);
+    background-size: cover;
+    background-position: bottom;
+}
+
+.info3{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background-color: $backgroundtext;
+    transform: translateY(100%)
+        translateY(-88px)
+        translateZ(0);
+    transition: transform 0.7s ease-out;
+}
+
+.info3:before{
+    z-index: -1;
+    display: block;
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background-image: url(/multimedia/outdoors1.jpg);
+    filter: blur(10px);
+    background-size: cover;
+    opacity: 0.25;
+    transform: translateY(-100%)
+        translateY(88px)
+        translateZ(0);
+    transition: transform 0.5s ease-out;
+}
+
+.card3:hover .info3,
+.card3:hover .info3:before {
+    transform: translateY(0) translateZ(0);
+    border: 1px solid $color2;
+    background-color: $backgroundpositano;
+}
+
+.title3 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color2;
+    font-family: $positanofont;
+    text-align: center;
+}
+
+.description3 {
+    margin: 0;
+    padding: 0 24px 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $color2;
+    font-family: $positanofont;
+}
+
+
+
+
+
+.card4{
+        grid-column: 1/2;
+        grid-row: 2/3;
+        border-radius: 6px;
+        margin: 15px auto;
+        width: 80%;
+        max-width: 100%;
+        min-height: 200px;
+        box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
+            0px 5px 8px 0px rgba(0, 0, 0, 0.14),
+            0px 1px 14px 0px rgba(0, 0, 0, 0.12);
+        overflow: hidden;
+        background-image: url(/multimedia/specialdays4.jpg);
+        background-size: cover;
+}
+    
+.info4{
+        position: relative;
+        width: 100%;
+        height: 500px;
+        background-color: $backgroundtext;
+        transform: translateY(100%)
+            translateY(-88px)
+            translateZ(0);
+        transition: transform 0.5s ease-out;
+    }
+    
+.info4:before{
+        z-index: -1;
+        display: block;
+        position: absolute;
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        background-image: url(/multimedia/outdoors1.jpg);
+        filter: blur(10px);
+        background-size: cover;
+        opacity: 0.25;
+        transform: translateY(-100%)
+            translateY(88px)
+            translateZ(0);
+        transition: transform 0.5s ease-out;
+    }
+    
+.card4:hover .info4,
+.card4:hover .info4:before {
+        transform: translateY(0) translateZ(0);
+        border: 1px solid $color2;
+        background-color: $backgroundpositano;
+    }
+    
+.title4 {
+    margin: 0;
+    padding: 1rem;
+    font-size: 4rem;
+    line-height: 1;
+    color: $color2;
+    font-family: $positanofont;
+    text-align: center;
+    }
+    
+.description4 {
+    margin: 0;
+    padding: 0 24px 24px;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: $color2;
+    font-family: $positanofont;
+    }
+
+
+/* end */
+
+
+/*contact*/
+
+
+#form {
+    position: relative;
+    width: 500px;
+    margin: 50px auto 100px auto;
+}
+
+input {
+    font-family: $positanofont;
+    font-size: 1rem;
+    width: 470px;
+    height: 50px;
+    padding: 0px 15px 0px 15px;
+    outline: none;
+    color: #726659;
+    border: solid 1px #b3aca7;
+    border-bottom: none;
+    transition: all 0.3s ease-in-out;
+}
+
+input:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+textarea {
+    width: 470px;
+    max-width: 470px;
+    height: 110px;
+    max-height: 110px;
+    padding: 15px;
+    outline: none;
+    color: #726659;
+    font-family: $positanofont;
+    font-size: 1rem;
+    border: solid 1px #b3aca7;
+    transition: all 0.3s ease-in-out;
+}
+
+textarea:hover {
+    background: #b3aca7;
+    color: #e2dedb;
+}
+
+#submit {
+    width: 470px;
+    padding: 0;
+    margin: -5px 0px 0px 0px;
+    font-family: $positanofont;
+    font-size: 0.875em;
+    color: #b3aca7;
+    outline:none;
+    cursor: pointer;
+    border: solid 1px #b3aca7;
+    border-top: none;
+}
+
+#submit:hover {
+    color: #e2dedb;
+}
+
+/*about*/
+
 .maintext{
-    margin: 1rem;
+    background-image: $positanogradient1;
+    margin: 0;
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr, 1fr;
     grid-template-rows: 2fr, 1fr, 1fr, 2fr;
     font-family: $positanofont;
     justify-content: center;
+
+
 
     h1{
         grid-column: 1/3;
@@ -135,7 +641,7 @@ body{
         grid-row: 2/3;
         padding: 1rem;
         padding-top: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         background-color: $backgroundtext;
     }
@@ -146,7 +652,7 @@ body{
         grid-row: 2/3;
         padding: 1rem;
         padding-top: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         background-color: $backgroundtext;;
     }
@@ -157,88 +663,18 @@ body{
         grid-row: 3/4;
         padding: 1rem;
         padding-top: 0.5rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         letter-spacing: 1px;
         background-color: $backgroundtext;
     }
 }
 
-.mainframe{
-    height: 70vh;
-    max-width: 100%;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: 1fr, 2fr, 1fr;
-    grid-template-rows: 2fr 1fr;
-    margin: 10px;
-    padding: 10px;
-}
+/* end about*/
 
-.maininside{
-    border: 1px solid $color1;
-    margin: 0;
-    opacity: 0.5;
-}
-
-.maininside:hover{
-    border-color: $color2;
-    opacity: 1;
-}
-
-.inner1{
-    background-image: url(./multimedia/outdoors1.jpg);
-    background-position: center;
-    background-size: cover;
-    grid-column: 1/2;
-    grid-row: 1/3;
-    height: 100%;
-    width: 100%;
-    border: 2px solid;
-    margin: 0px;
-    padding: 40px;
-}
-
-    .inner2 {
-    background-image: url(./multimedia/indoors2.jpg);
-    background-position: center;
-    background-size: cover;
-    grid-column: 2/3;
-    grid-row: 1/2;
-    height: 100%;
-    width: 100%;
-    border: 2px solid;
-    margin: 0px;
-    padding: 40px;
-    }
-
-    .inner3 {
-    background-image: url(./multimedia/outdoors3.jpg);
-    background-position: center;
-    background-size: cover;
-    grid-column: 3/4;
-    grid-row: 1/3;
-    height: 100%;
-    width: 100%;
-    border: 2px solid;
-    margin: 0px;
-    padding: 40px;
-    }
-
-    .inner4 {
-    background-image: url(./multimedia/indoors8.jpg);
-    background-position: center;
-    background-size: cover;
-    grid-column: 2/3;
-    grid-row: 2/3;
-    height: 100%;
-    width: 100%;
-    border: 2px solid;
-    margin: 0px;
-    padding: 40px;
-    }
+    /*footer*/
 
     .under{
-        background-color: $backgroundpositano;
+        background-image:$positanogradient1;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -248,13 +684,351 @@ body{
     .social{
         color:$color2;
         padding: 50px;
-        font-size: 80px;
+        font-size: 45px;
     }
     
     .social:hover{
         color: $color1;
     }
     
+
+
+
+
+/*mediaqueries*/
+
+
+
+
+/*logo media*/
+
+@media screen and(min-width: 900px){
+    .logo{
+        height: 320px;
+        width: 350px;
+        padding: 0px;
+        margin-top: 0px;
+        background-image: url(/multimedia/Graylogo.jpeg);
+    }
+    .logoframe{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+    }
+    
+}
+
+@media screen and(max-width: 700px){
+    .logoframe{
+        background-image: $positanogradient2
+    }
+
+    .logo{
+        height: 190px;
+        width: 210px;
+        margin-top: 50px;
+    }
+
+    .mainframe{
+        background-image: $positanogradient2;
+    }
+}
+
+
+
+@media only screen and(max-width: 500px){
+    .logoframe{
+        display: flex;
+        flex-direction: column;
+        background-image: linear-gradient(to right,
+        #808080 100%, rgba(165, 17, 184, 0.185)
+        );
+    }
+    .logo{
+        background-image: url(/multimedia/WomanLogo.jpg);
+        height: 300px;
+        width: 330px;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/*navbar media*/
+
+@media only screen and (min-width: 900px){
+    li a{
+        color: $backgroundpositano;
+    }
+    
+}
+
+@media screen and(max-width: 500px){
+    
+    .navigation{
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 1;
+        list-style-type: none;
+        margin-left: 20px;
+        padding: 0;
+        height: auto;
+        width: 80%;
+        justify-content: center;
+    }
+    li a{
+        color: $backgroundtext;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+}
+
+
+
+    /*index media*/
+    @media only screen and (min-width: 900px){
+        .mainframe{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+            .maininside:hover{
+                border-color: $color1;
+            }
+            .inner1{
+                padding: 120px;
+            }
+            .inner2{
+                padding: 120px;
+            }
+            .inner3{
+                padding: 120px;
+            }
+            .inner4{
+                padding: 120px;
+            }
+        }
+    }
+
+    @media screen and(max-width: 700px){
+        .mainframe{
+            background-image: $positanogradient2;
+        }
+    }
+    
+    @media screen and(max-width: 500px){
+        .mainframe{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+            display: flex;
+            flex-grow: auto;
+            flex-direction: column;
+            background-position: cover;
+        }
+        .inner1{
+            padding: 130px;
+        }
+        .inner2{
+            padding: 130px;
+        }
+        .inner3{
+            padding: 130px;
+            background-position: bottom;
+        }
+        .inner4{
+            padding: 130px;
+        }
+    }
+
+    @media screen and(max-width:320px){
+        .inner1{
+            padding: 120px;
+        }
+        .inner2{
+            padding: 120px;
+        }
+        .inner3{
+            padding: 120px;
+        }
+        .inner4{
+            padding: 120px;
+        }
+    }
+
+
+/* product media*/
+    @media only screen and (min-width: 900px){
+        .product-background{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+        }
+}
+
+
+    @media screen and(max-width: 700px){
+        .product-background{
+            background-image: $positanogradient2;
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    
+    @media screen and(max-width: 500px){
+        .product-background{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+            margin: 0px;
+            padding: 0px;
+            }
+    }
+
+    @media screen and(max-width: 400px){
+        
+        .title1 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 4rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+            text-align: center;
+        }
+        
+        .description1 {
+            margin: 0;
+            padding: 0 24px 24px;
+            font-size: 1.3rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+        }
+
+
+        .title2 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 4rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+            text-align: center;
+        }
+        
+        .description2 {
+            margin: 0;
+            padding: 0 24px 24px;
+            font-size: 1.3rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+        }
+
+        .title3 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 4rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+            text-align: center;
+        }
+        
+        .description3 {
+            margin: 0;
+            padding: 0 24px 24px;
+            font-size: 1.3rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+        }
+
+        .title4 {
+            margin: 0;
+            padding: 1rem;
+            font-size: 4rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+            text-align: center;
+        }
+        
+        .description4 {
+            margin: 0;
+            padding: 0 24px 24px;
+            font-size: 1.3rem;
+            line-height: 1;
+            color: $color2;
+            font-family: $positanofont;
+        }
+    }
+/*about media*/
+
+@media only screen and(min-width:900px){
+    .maintext{
+        background-image: linear-gradient(to right,
+        #808080 100%, rgba(165, 17, 184, 0.185)
+        );
+    }
+}
+
+@media only screen and(max-width:700px){
+    .maintext{
+        background-image: $positanogradient2;
+    }
+}
+
+@media only screen and(max-width:500px){
+    .maintext{
+        background-image: linear-gradient(to right,
+        #808080 100%, rgba(165, 17, 184, 0.185)
+        );
+        display: block;
+    }
+    .pharagraph1{
+        margin: 10px;
+    }
+    .pharagraph2{
+        margin: 10px;
+    }
+    .pharagraph3{
+        margin: 10px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and(max-width:318px){
+    .maintext{
+        background-image: linear-gradient(to right,
+        #808080 100%, rgba(165, 17, 184, 0.185)
+        );
+        display: block;
+    }
+    .pharagraph1{
+        margin: 10px;
+    }
+    .pharagraph2{
+        margin: 10px;
+        margin-bottom: 0;
+    }
+    .pharagraph3{
+        margin: 10px;
+    }
+}
+
+
+
+/*footer media*/
+
+    @media only screen and (min-width: 900px){
+        .under{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
+        }
+    }
+
     @media only screen and (max-width: 720px){
         .social{
             font-size: 30px;
@@ -262,21 +1036,20 @@ body{
         }
     }    
 
-    @media only screen and (max-width: 840px){
-        .logo{
-            height: 210px;
-            width: 250px;
-            padding: 0px;
+    @media only screen and (max-width: 700px){
+        .under{
+            background-image: $positanogradient2;
         }
-        
-    }
+    }    
 
-    @media only screen and(min-width:580){
-        ul{
-            flex-flow: column;
+    @media only screen and (max-width: 500px){
+        .under{
+            background-image: linear-gradient(to right,
+            #808080 100%, rgba(165, 17, 184, 0.185)
+            );
         }
-        li{
-            margin: 10px;
-        }
-    }
+    }    
+
+
+
 
