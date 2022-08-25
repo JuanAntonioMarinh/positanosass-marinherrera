@@ -56,36 +56,20 @@ body {
   justify-content: space-between;
   padding: 0;
   text-align: left;
-  background-image: linear-gradient(to right, #1f1d1d 83%, rgba(165, 17, 184, 0.185));
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
 }
 
 .logo {
   background-image: url(/multimedia/logogreencurs.jpg);
   background-size: cover;
-  height: 200px;
-  width: 220px;
+  height: 300px;
+  width: 320px;
   padding: 10px;
   margin: 10px;
 }
 
 .logo:hover {
   border-color: #a411b8;
-}
-
-/*banner*/
-.banner {
-  width: 300px;
-  height: auto;
-  padding-top: 40px;
-  margin: 20px;
-  margin-left: 0;
-  justify-items: center;
-}
-
-.banner-text {
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 0.8rem;
-  color: #a411b8;
 }
 
 /*navbar menu*/
@@ -117,8 +101,6 @@ span {
 
 li a:hover:not(.active) {
   color: #31d1bc;
-  transform: scale(1.1);
-  opacity: 1;
 }
 
 .active {
@@ -128,7 +110,8 @@ li a:hover:not(.active) {
 }
 
 .material-symbols-outlined {
-  font-size: 32px;
+  font-size: 64px;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 /*index*/
@@ -138,24 +121,22 @@ li a:hover:not(.active) {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr, 2fr, 1fr;
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 1fr, 1fr;
   margin: 0;
   padding: 10px;
-  background-image: linear-gradient(to right, #1f1d1d 83%, rgba(165, 17, 184, 0.185));
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
 }
 
 .maininside {
-  border: 1px solid;
   margin: 0;
-  opacity: 0.5;
 }
 
 .maininside:hover {
   border-color: #31d1bc;
   transition: 1s;
   border-radius: 8px;
-  opacity: 1;
-  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px #31d1bc;
+  transform: scale(1.01);
 }
 
 .inner1 {
@@ -164,7 +145,7 @@ li a:hover:not(.active) {
   background-size: cover;
   grid-column: 1/2;
   grid-row: 1/3;
-  height: 100%;
+  height: 450px;
   width: 100%;
   margin: 0px;
   padding-top: 100px;
@@ -177,7 +158,7 @@ li a:hover:not(.active) {
   background-size: cover;
   grid-column: 2/3;
   grid-row: 1/2;
-  height: 100%;
+  height: 225px;
   width: 100%;
   margin: 0px;
   padding: 40px;
@@ -189,7 +170,7 @@ li a:hover:not(.active) {
   background-size: cover;
   grid-column: 3/4;
   grid-row: 1/3;
-  height: 100%;
+  height: 450px;
   width: 100%;
   margin: 0px;
   padding: 40px;
@@ -201,7 +182,7 @@ li a:hover:not(.active) {
   background-size: cover;
   grid-column: 2/3;
   grid-row: 2/3;
-  height: 100%;
+  height: 210px;
   width: 100%;
   margin: 0px;
   padding: 40px;
@@ -209,7 +190,7 @@ li a:hover:not(.active) {
 
 /*products*/
 .product-background {
-  background-image: linear-gradient(to right, #1f1d1d 83%, rgba(165, 17, 184, 0.185));
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
   display: grid;
   padding: 64px;
   grid-template-columns: 1fr, 1fr;
@@ -221,7 +202,7 @@ li a:hover:not(.active) {
   grid-row: 1/2;
   border-radius: 6px;
   margin: 15px auto;
-  width: 80%;
+  width: 95%;
   max-width: 100%;
   min-height: 200px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -288,7 +269,7 @@ li a:hover:not(.active) {
   grid-row: 1/2;
   border-radius: 6px;
   margin: 15px auto;
-  width: 80%;
+  width: 95%;
   max-width: 100%;
   min-height: 200px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -353,7 +334,7 @@ li a:hover:not(.active) {
   grid-row: 2/3;
   border-radius: 6px;
   margin: 15px auto;
-  width: 80%;
+  width: 95%;
   max-width: 100%;
   min-height: 200px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -418,7 +399,7 @@ li a:hover:not(.active) {
   grid-row: 2/3;
   border-radius: 6px;
   margin: 15px auto;
-  width: 80%;
+  width: 95%;
   max-width: 100%;
   min-height: 200px;
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12);
@@ -479,69 +460,78 @@ li a:hover:not(.active) {
 
 /* end */
 /*contact*/
-#form {
+.form {
+  width: 380px;
+  height: 480px;
+  background: #524e4e;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #31d1bc;
+  margin-top: 125px;
+  margin: auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Nothing You Could Do", cursive;
   position: relative;
-  width: 500px;
-  margin: 50px auto 100px auto;
+}
+
+h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #31d1bc;
+  border-bottom: 3px solid #a411b8;
 }
 
 input {
-  font-family: "Nothing You Could Do", cursive;
-  font-size: 1rem;
-  width: 470px;
-  height: 50px;
-  padding: 0px 15px 0px 15px;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
   outline: none;
-  color: #726659;
-  border: solid 1px #b3aca7;
-  border-bottom: none;
-  transition: all 0.3s ease-in-out;
-}
-
-input:hover {
-  background: #b3aca7;
-  color: #e2dedb;
-}
-
-textarea {
-  width: 470px;
-  max-width: 470px;
-  height: 110px;
-  max-height: 110px;
-  padding: 15px;
-  outline: none;
-  color: #726659;
+  resize: none;
+  border: 0;
   font-family: "Nothing You Could Do", cursive;
-  font-size: 1rem;
-  border: solid 1px #b3aca7;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
+  border-bottom: 2px solid #a411b8;
 }
 
-textarea:hover {
-  background: #b3aca7;
-  color: #e2dedb;
+input:focus {
+  border-bottom: 2px solid #31d1bc;
 }
 
-#submit {
-  width: 470px;
-  padding: 0;
-  margin: -5px 0px 0px 0px;
+p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font: size 18px;
+  color: #31d1bc;
+}
+
+button {
+  float: right;
+  padding: 8px 12px;
+  margin: 8px 0 0;
   font-family: "Nothing You Could Do", cursive;
-  font-size: 0.875em;
-  color: #b3aca7;
-  outline: none;
+  border: 2px solid #31d1bc;
+  background: 0;
+  color: #31d1bc;
   cursor: pointer;
-  border: solid 1px #b3aca7;
-  border-top: none;
+  transition: all 0.3s;
 }
 
-#submit:hover {
-  color: #e2dedb;
+button:hover {
+  background: rgba(165, 17, 184, 0.185);
+  color: #31d1bc;
+}
+
+.contactcontainer {
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
 }
 
 /*about*/
 .maintext {
-  background-image: linear-gradient(to right, #1f1d1d 83%, rgba(165, 17, 184, 0.185));
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
   margin: 0;
   display: grid;
   gap: 2rem;
@@ -553,52 +543,141 @@ textarea:hover {
 .maintext h1 {
   grid-column: 1/3;
   grid-row: 1/2;
-  background-color: #524e4e;
+  background: 0;
   padding: 1rem;
   padding-top: 0.5rem;
+  text-align: center;
   font-size: 4rem;
+  font-weight: 90;
   letter-spacing: 1px;
-  color: #1f1d1d;
+  color: #31d1bc;
 }
 .maintext .pharagraph1 {
   border-radius: 20px;
-  justify-content: center;
-  color: #1f1d1d;
   grid-column: 1/2;
   grid-row: 2/3;
   padding: 1rem;
   padding-top: 0.5rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  background-color: #524e4e;
+  background: 0;
+  text-align: justify;
+  color: #31d1bc;
 }
 .maintext .pharagraph2 {
   border-radius: 20px;
-  color: #1f1d1d;
   grid-column: 2/3;
   grid-row: 2/3;
   padding: 1rem;
   padding-top: 0.5rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  background-color: #524e4e;
+  background: 0;
+  text-align: justify;
+  color: #31d1bc;
 }
 .maintext .pharagraph3 {
   border-radius: 20px;
-  color: #1f1d1d;
   grid-column: 1/3;
   grid-row: 3/4;
   padding: 1rem;
   padding-top: 0.5rem;
   font-size: 1.5rem;
   letter-spacing: 1px;
-  background-color: #524e4e;
+  background: 0;
+  text-align: justify;
+  color: #31d1bc;
 }
 
 /* end about*/
+/*shopping*/
+.mainscreen {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: "Nothing You Could Do", cursive;
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
+  color: #31d1bc;
+  padding-left: 15%;
+}
+
+.card {
+  width: 60rem;
+  margin: 3rem auto;
+  position: center;
+  align-self: center;
+  top: 50rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.rightside {
+  background-color: #524e4e;
+  width: 35rem;
+  padding: 2rem 1rem 1rem 1rem;
+  box-shadow: 0 0 40px -10px #31d1bc;
+}
+
+p {
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 200;
+  margin: 0.8rem 0;
+}
+
+.inputbox {
+  background: #524e4e;
+  color: #808080;
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 1.5px solid #808080;
+  margin-bottom: 1rem;
+  border-radius: 0.3rem;
+  font-family: "Nothing You Could Do", cursive;
+  color: #31d1bc;
+  font-size: 1.1rem;
+  font-weight: 500;
+  outline: none;
+}
+
+.expcvv {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+}
+
+.expcvv_text {
+  padding-right: 1rem;
+}
+
+.expcvv_text2 {
+  padding: 0 1rem;
+}
+
+.button {
+  background: #808080;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  color: #31d1bc;
+  font-weight: 400;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  width: 100%;
+  letter-spacing: 0.11rem;
+  outline: none;
+}
+
+.button:hover {
+  transform: scale(1.05) translateY(-3px);
+  box-shadow: 3px 3px 6px rgba(56, 55, 55, 0.5215686275);
+}
+
 /*footer*/
 .under {
-  background-image: linear-gradient(to right, #1f1d1d 83%, rgba(165, 17, 184, 0.185));
+  background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -622,30 +701,30 @@ textarea:hover {
     width: 350px;
     padding: 0px;
     margin-top: 0px;
-    background-image: url(/multimedia/Graylogo.jpeg);
+    background-image: url(/multimedia/logopositano900px.jpeg);
   }
   .logoframe {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
   }
 }
 @media screen and (max-width: 700px) {
   .logoframe {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
   }
   .logo {
-    height: 190px;
-    width: 210px;
+    height: 290px;
+    width: 310px;
     margin-top: 50px;
   }
   .mainframe {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
   }
 }
 @media only screen and (max-width: 500px) {
   .logoframe {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
   }
   .logo {
     background-image: url(/multimedia/WomanLogo.jpg);
@@ -655,10 +734,19 @@ textarea:hover {
     padding: 0;
   }
 }
+@media only screen and (max-width: 320px) {
+  .logo {
+    padding-left: 3rem;
+    height: 290px;
+    width: 300px;
+    box-sizing: border-box;
+  }
+}
 /*navbar media*/
 @media only screen and (min-width: 900px) {
   li a {
-    color: #1f1d1d;
+    color: #808080;
+    font-size: 24px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -683,34 +771,71 @@ textarea:hover {
 /*index media*/
 @media only screen and (min-width: 900px) {
   .mainframe {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
   }
   .mainframe .maininside:hover {
-    border-color: #a411b8;
+    border-color: #31d1bc;
   }
   .mainframe .inner1 {
-    padding: 120px;
+    height: 590px;
+    padding: 140px;
   }
   .mainframe .inner2 {
-    padding: 120px;
+    padding: 140px;
   }
   .mainframe .inner3 {
-    padding: 120px;
+    height: 590px;
+    padding: 140px;
   }
   .mainframe .inner4 {
-    padding: 120px;
+    padding: 140px;
+  }
+  .mainframe .inner5 {
+    padding: 140px;
+  }
+  .mainframe .inner6 {
+    padding: 140px;
+  }
+  .mainframe .inner7 {
+    padding: 140px;
+  }
+  .mainframe .inner8 {
+    padding: 140px;
   }
 }
 @media screen and (max-width: 700px) {
   .mainframe {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
+  }
+  .inner1 {
+    padding: 30px;
+    height: 450px;
+    width: 100%;
+  }
+  .inner2 {
+    height: 450px;
+    padding: 30px;
+    width: 100%;
+  }
+  .inner3 {
+    height: 450px;
+    padding: 30px;
+    background-position: cover;
+    width: 100%;
+  }
+  .inner4 {
+    height: 450px;
+    padding: 130px;
+    width: 100%;
   }
 }
 @media screen and (max-width: 500px) {
   .mainframe {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
     display: flex;
-    flex-grow: auto;
+    flex-grow: 1;
     flex-direction: column;
     background-position: cover;
   }
@@ -722,42 +847,45 @@ textarea:hover {
   }
   .inner3 {
     padding: 130px;
-    background-position: bottom;
+    background-position: cover;
   }
   .inner4 {
     padding: 130px;
   }
 }
 @media screen and (max-width: 320px) {
+  .maininside {
+    margin: 0;
+  }
   .inner1 {
-    padding: 120px;
+    padding: 150px;
   }
   .inner2 {
-    padding: 120px;
+    padding: 150px;
   }
   .inner3 {
-    padding: 120px;
+    padding: 150px;
   }
   .inner4 {
-    padding: 120px;
+    padding: 150px;
   }
 }
 /* product media*/
 @media only screen and (min-width: 900px) {
   .product-background {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
   }
 }
 @media screen and (max-width: 700px) {
   .product-background {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
     display: flex;
     flex-direction: column;
   }
 }
 @media screen and (max-width: 500px) {
   .product-background {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
     margin: 0px;
     padding: 0px;
   }
@@ -832,20 +960,129 @@ textarea:hover {
     font-family: "Nothing You Could Do", cursive;
   }
 }
+/*contact media*/
+@media only screen and (min-width: 900px) {
+  .contactcontainer {
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
+  }
+  .form {
+    box-shadow: 0 0 40px -10px #31d1bc;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .form {
+    width: 330px;
+    height: 420px;
+    background: #524e4e;
+    border-radius: 8px;
+    box-shadow: 0 0 40px -10px #31d1bc;
+    margin: auto;
+    padding: 20px 30px;
+    max-width: calc(100vw - 40px);
+    box-sizing: border-box;
+    font-family: "Nothing You Could Do", cursive;
+    position: relative;
+  }
+  h2 {
+    margin: 10px 0;
+    padding-bottom: 10px;
+    width: 180px;
+    color: #a411b8;
+    border-bottom: 3px solid #31d1bc;
+  }
+  input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    background: none;
+    outline: none;
+    resize: none;
+    border: 0;
+    font-family: "Nothing You Could Do", cursive;
+    transition: all 0.3s;
+    border-bottom: 2px solid #31d1bc;
+  }
+  input:focus {
+    border-bottom: 2px solid #31d1bc;
+  }
+  p:before {
+    content: attr(type);
+    display: block;
+    margin: 28px 0 0;
+    font-size: 14px;
+    color: #a411b8;
+  }
+  button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Nothing You Could Do", cursive;
+    border: 2px solid #31d1bc;
+    background: 0;
+    color: #31d1bc;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  button:hover {
+    background: #1f1d1d;
+    color: #31d1bc;
+  }
+  .contactcontainer {
+    background-image: linear-gradient(to right, #1f1d1d 43%, rgba(165, 17, 184, 0.185));
+  }
+  .contactcontainer {
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
+  }
+}
+@media only screen and (max-width: 500px) {
+  .form {
+    background: #524e4e;
+    box-shadow: 0 0 40px -10px #31d1bc;
+  }
+  h2 {
+    color: #31d1bc;
+    border-bottom: 3px solid #31d1bc;
+  }
+  input {
+    font-family: "Nothing You Could Do", cursive;
+    transition: all 0.3s;
+    border-bottom: 2px solid #31d1bc;
+  }
+  input:focus {
+    border-bottom: 2px solid #31d1bc;
+  }
+  p:before {
+    color: #31d1bc;
+  }
+  button {
+    float: right;
+    padding: 8px 12px;
+    margin: 8px 0 0;
+    font-family: "Nothing You Could Do", cursive;
+    border: 2px solid #31d1bc;
+  }
+  button:hover {
+    background: #1f1d1d;
+    color: #31d1bc;
+  }
+  .contactcontainer {
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
+  }
+}
 /*about media*/
 @media only screen and (min-width: 900px) {
   .maintext {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
   }
 }
 @media only screen and (max-width: 700px) {
   .maintext {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
   }
 }
 @media only screen and (max-width: 500px) {
   .maintext {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
     display: block;
   }
   .pharagraph1 {
@@ -861,7 +1098,7 @@ textarea:hover {
 }
 @media only screen and (max-width: 318px) {
   .maintext {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
     display: block;
   }
   .pharagraph1 {
@@ -875,10 +1112,91 @@ textarea:hover {
     margin: 10px;
   }
 }
+/*shopping media*/
+@media only screen and (min-width: 900px) {
+  .mainscreen {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Nothing You Could Do", cursive;
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
+    color: #31d1bc;
+    padding-left: 30%;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .mainscreen {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Nothing You Could Do", cursive;
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
+    color: #31d1bc;
+    padding-left: 10%;
+  }
+  .card {
+    width: 20rem;
+    margin: 1rem auto;
+    position: center;
+    align-self: center;
+    top: 20rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .rightside {
+    background-color: #524e4e;
+    width: 25rem;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0 0 40px -10px #31d1bc;
+  }
+  p {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin: 0.8rem 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .mainscreen {
+    min-height: 100vh;
+    width: 100%;
+    font-family: "Nothing You Could Do", cursive;
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
+    color: #31d1bc;
+    padding-left: 0;
+  }
+  .card {
+    width: 20rem;
+    margin: 1rem auto;
+    position: center;
+    align-self: center;
+    top: 10rem;
+    display: flex;
+    flex-direction: row;
+  }
+  .rightside {
+    background-color: #524e4e;
+    width: 20rem;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow: 0 0 40px -10px #31d1bc;
+  }
+  p {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin: 0.8rem 0;
+  }
+}
 /*footer media*/
 @media only screen and (min-width: 900px) {
   .under {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #616161 100%, rgba(163, 17, 182, 0.1843137255));
+  }
+  .social {
+    color: #31d1bc;
+    padding: 50px;
+    font-size: 45px;
+  }
+  .social:hover {
+    color: #a411b8;
   }
 }
 @media only screen and (max-width: 720px) {
@@ -889,11 +1207,11 @@ textarea:hover {
 }
 @media only screen and (max-width: 700px) {
   .under {
-    background-image: linear-gradient(to right, #1f1d1d 83%, rgba(29, 122, 110, 0.871));
+    background-image: linear-gradient(to right, #1f1d1d 63%, rgba(28, 87, 81, 0.753));
   }
 }
 @media only screen and (max-width: 500px) {
   .under {
-    background-image: linear-gradient(to right, #808080 100%, rgba(165, 17, 184, 0.185));
+    background-image: linear-gradient(to right, #808080 100%, rgba(163, 17, 182, 0.185));
   }
 }/*# sourceMappingURL=styles.css.map */

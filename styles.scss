@@ -11,9 +11,13 @@ $smallbackground: #808080;
 $backgroundtext: #524e4e;
 $purpletone: rgba(165, 17, 184, 0.185);
 $positanogradient1: linear-gradient(to right,
-#1f1d1d 83%, rgba(165, 17, 184, 0.185));
+#1f1d1d 43%, rgba(165, 17, 184, 0.185));
 $positanogradient2: linear-gradient(to right,
-#1f1d1d 83%, rgba(29, 122, 110, 0.871));
+#1f1d1d 63%, rgba(28, 87, 81, 0.753));
+$positanobackgroundgray: linear-gradient(to right,
+    #808080 100%, rgba(163, 17, 182, 0.185));
+$positanobackgroundgraynew: linear-gradient(to right,
+#616161 100%, #a311b62f);
 $color1: #a411b8;
 $color2: #31d1bc;
 $positanofont: 'Nothing You Could Do', cursive;
@@ -80,8 +84,8 @@ body{
 .logo{
     background-image: url(/multimedia/logogreencurs.jpg);
     background-size: cover;
-    height: 200px;
-    width: 220px;
+    height: 300px;
+    width: 320px;
     padding: 10px;
     margin: 10px;
 }
@@ -91,22 +95,6 @@ body{
 
 }
 
-/*banner*/
-
-.banner{
-    width: 300px;
-    height: auto;
-    padding-top: 40px;
-    margin: 20px;
-    margin-left: 0;
-    justify-items: center;
-}
-
-.banner-text{
-    font-family: $positanofont;
-    font-size: 0.8rem;
-    color: $color1;
-}
 
 /*navbar menu*/
 
@@ -140,8 +128,6 @@ body{
     
     li a:hover:not(.active) {
     color: $color2;
-    transform: scale(1.1);
-    opacity: 1;
     }
 
     .active {
@@ -150,10 +136,16 @@ body{
     opacity: 1;
     }
 
-    .material-symbols-outlined{
-        font-size: 32px;
-    }
 
+
+    .material-symbols-outlined {
+        font-size: 64px;
+        font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+    }
 
 /*index*/
 
@@ -163,7 +155,7 @@ body{
     display: grid;
     gap: 1rem;
     grid-template-columns: 1fr, 2fr, 1fr;
-    grid-template-rows: 2fr 1fr;
+    grid-template-rows: 1fr, 1fr;
     margin: 0;
     padding: 10px;
     background-image:$positanogradient1;
@@ -172,17 +164,15 @@ body{
 
 
 .maininside{
-    border: 1px solid;
     margin: 0;
-    opacity: 0.5;
 }
 
 .maininside:hover{
     border-color: $color2;
     transition: 1s;
     border-radius: 8px;
-    opacity: 1;
-    transform: scale(1.05);
+    box-shadow:0 0 40px -10px $color2;
+    transform: scale(1.01);
 
 }
 
@@ -192,7 +182,7 @@ body{
     background-size: cover;
     grid-column: 1/2;
     grid-row: 1/3;
-    height: 100%;
+    height: 450px;
     width: 100%;
     margin: 0px;
     padding-top: 100px;
@@ -205,7 +195,7 @@ body{
     background-size: cover;
     grid-column: 2/3;
     grid-row: 1/2;
-    height: 100%;
+    height: 225px;
     width: 100%;
     margin: 0px;
     padding: 40px;
@@ -217,7 +207,7 @@ body{
     background-size: cover;
     grid-column: 3/4;
     grid-row: 1/3;
-    height: 100%;
+    height: 450px;
     width: 100%;
     margin: 0px;
     padding: 40px;
@@ -229,13 +219,11 @@ body{
     background-size: cover;
     grid-column: 2/3;
     grid-row: 2/3;
-    height: 100%;
+    height: 210px;
     width: 100%;
     margin: 0px;
     padding: 40px;
     }
-
-
 
 /*products*/
 
@@ -252,7 +240,7 @@ body{
     grid-row: 1/2;
     border-radius: 6px;
     margin: 15px auto;
-    width: 80%;
+    width: 95%;
     max-width: 100%;
     min-height: 200px;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -328,7 +316,7 @@ body{
     grid-row: 1/2;
     border-radius: 6px;
     margin: 15px auto;
-    width: 80%;
+    width: 95%;
     max-width: 100%;
     min-height: 200px;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -401,7 +389,7 @@ body{
     grid-row: 2/3;
     border-radius: 6px;
     margin: 15px auto;
-    width: 80%;
+    width: 95%;
     max-width: 100%;
     min-height: 200px;
     box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -476,7 +464,7 @@ body{
         grid-row: 2/3;
         border-radius: 6px;
         margin: 15px auto;
-        width: 80%;
+        width: 95%;
         max-width: 100%;
         min-height: 200px;
         box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
@@ -548,64 +536,73 @@ body{
 /*contact*/
 
 
-#form {
-    position: relative;
-    width: 500px;
-    margin: 50px auto 100px auto;
-}
-
-input {
+.form{
+    width:380px;
+    height:480px;
+    background:$backgroundtext;
+    border-radius:8px;
+    box-shadow:0 0 40px -10px $color2;
+    margin-top: 125px;
+    margin: auto;
+    padding:20px 30px;
+    max-width:calc(100vw - 40px);
+    box-sizing:border-box;
     font-family: $positanofont;
-    font-size: 1rem;
-    width: 470px;
-    height: 50px;
-    padding: 0px 15px 0px 15px;
-    outline: none;
-    color: #726659;
-    border: solid 1px #b3aca7;
-    border-bottom: none;
-    transition: all 0.3s ease-in-out;
+    position:relative;
 }
 
-input:hover {
-    background: #b3aca7;
-    color: #e2dedb;
+h2{
+    margin:10px 0;
+    padding-bottom:10px;
+    width:180px;
+    color: $color2;
+    border-bottom:3px solid $color1;
 }
 
-textarea {
-    width: 470px;
-    max-width: 470px;
-    height: 110px;
-    max-height: 110px;
-    padding: 15px;
-    outline: none;
-    color: #726659;
-    font-family: $positanofont;
-    font-size: 1rem;
-    border: solid 1px #b3aca7;
-    transition: all 0.3s ease-in-out;
-}
-
-textarea:hover {
-    background: #b3aca7;
-    color: #e2dedb;
-}
-
-#submit {
-    width: 470px;
-    padding: 0;
-    margin: -5px 0px 0px 0px;
-    font-family: $positanofont;
-    font-size: 0.875em;
-    color: #b3aca7;
+input{
+    width:100%;
+    padding:10px;
+    box-sizing:border-box;
+    background:none;
     outline:none;
-    cursor: pointer;
-    border: solid 1px #b3aca7;
-    border-top: none;
+    resize:none;
+    border:0;
+    font-family:$positanofont;
+    transition:all .3s;
+    border-bottom:2px solid $color1;
 }
 
-#submit:hover {
-    color: #e2dedb;
+input:focus{
+    border-bottom:2px solid $color2;
+}
+
+p:before{
+    content:attr(type);
+    display:block;
+    margin:28px 0 0;
+    font: size 18px;
+    color:$color2;
+}
+
+button{
+    float:right;
+    padding:8px 12px;
+    margin:8px 0 0;
+    font-family:$positanofont;
+    border:2px solid $color2;
+    background:0;
+    color:$color2;
+    cursor:pointer;
+    transition:all .3s
+}
+
+button:hover{
+    background: $purpletone;
+    color: $color2;
+}
+
+.contactcontainer{
+    background-image: $positanogradient1;
 }
 
 /*about*/
@@ -625,51 +622,146 @@ textarea:hover {
     h1{
         grid-column: 1/3;
         grid-row: 1/2;
-        background-color: $backgroundtext;
+        background: 0;
         padding: 1rem;
         padding-top: 0.5rem;
+        text-align: center;
         font-size: 4rem;
+        font-weight: 90;
         letter-spacing: 1px;
-        color: $backgroundpositano;
+        color: $color2;
     }
 
     .pharagraph1{
         border-radius: 20px;
-        justify-content: center;
-        color: $backgroundpositano;
         grid-column: 1/2;
         grid-row: 2/3;
         padding: 1rem;
         padding-top: 0.5rem;
         font-size: 1.5rem;
         letter-spacing: 1px;
-        background-color: $backgroundtext;
+        background: 0;
+        text-align: justify;
+        color: $color2;
     }
     .pharagraph2{
         border-radius: 20px;
-        color: $backgroundpositano;
         grid-column: 2/3;
         grid-row: 2/3;
         padding: 1rem;
         padding-top: 0.5rem;
         font-size: 1.5rem;
         letter-spacing: 1px;
-        background-color: $backgroundtext;;
+        background: 0;
+        text-align: justify;
+        color: $color2;
     }
     .pharagraph3{
         border-radius: 20px;
-        color: $backgroundpositano;
         grid-column: 1/3;
         grid-row: 3/4;
         padding: 1rem;
         padding-top: 0.5rem;
         font-size: 1.5rem;
         letter-spacing: 1px;
-        background-color: $backgroundtext;
+        background: 0;
+        text-align: justify;
+        color: $color2;
     }
 }
 
 /* end about*/
+
+/*shopping*/
+
+.mainscreen{
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+    flex-direction: column;
+    font-family: $positanofont;
+    background-image: $positanogradient1;
+    color:$color2;
+    padding-left: 15%;
+}
+
+.card {
+	width: 60rem;
+    margin: 3rem auto;
+    position:center;
+    align-self: center;
+    top: 50rem;
+    display:flex;
+    flex-direction: row;
+}
+
+.rightside {
+    background-color: $backgroundtext;
+	width: 35rem;
+    padding: 2rem 1rem 1rem 1rem;
+    box-shadow:0 0 40px -10px $color2;
+}
+
+p{
+    display:block;
+    font-size: 1.1rem;
+    font-weight: 200;
+    margin: .8rem 0;
+}
+
+.inputbox
+{
+    background: $backgroundtext;
+    color: $smallbackground;
+	width: 100%;
+    padding: 0.5rem;
+    border: none;
+    border-bottom: 1.5px solid $smallbackground;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+    font-family: $positanofont;
+    color: $color2;
+    font-size: 1.1rem;
+    font-weight: 500;
+    outline:none;
+}
+
+.expcvv {
+    display:flex;
+    justify-content: space-between;
+    padding-top: 0.6rem;
+}
+
+.expcvv_text{
+    padding-right: 1rem;
+}
+.expcvv_text2{
+    padding:0 1rem;
+}
+
+.button{
+    background: $smallbackground;
+    padding: 15px;
+    border: none;
+    border-radius: 50px;
+    color: $color2;
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-top: 10px;
+    width:100%;
+    letter-spacing: .11rem;
+    outline:none;
+}
+
+.button:hover
+{
+	transform: scale(1.05) translateY(-3px);
+    box-shadow: 3px 3px 6px #38373785;
+}
+
+
+
+
 
     /*footer*/
 
@@ -680,6 +772,7 @@ textarea:hover {
         justify-content: center;
         
     }
+
     
     .social{
         color:$color2;
@@ -708,12 +801,10 @@ textarea:hover {
         width: 350px;
         padding: 0px;
         margin-top: 0px;
-        background-image: url(/multimedia/Graylogo.jpeg);
+        background-image: url(/multimedia/logopositano900px.jpeg);
     }
     .logoframe{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgraynew;
     }
     
 }
@@ -724,8 +815,8 @@ textarea:hover {
     }
 
     .logo{
-        height: 190px;
-        width: 210px;
+        height: 290px;
+        width: 310px;
         margin-top: 50px;
     }
 
@@ -740,9 +831,7 @@ textarea:hover {
     .logoframe{
         display: flex;
         flex-direction: column;
-        background-image: linear-gradient(to right,
-        #808080 100%, rgba(165, 17, 184, 0.185)
-        );
+        background-image:$positanobackgroundgray;
     }
     .logo{
         background-image: url(/multimedia/WomanLogo.jpg);
@@ -753,11 +842,21 @@ textarea:hover {
     }
 }
 
+@media only screen and(max-width: 320px){
+    .logo{
+        padding-left: 3rem;
+        height: 290px;
+        width:300px;
+        box-sizing: border-box;
+    }
+}
+
 /*navbar media*/
 
 @media only screen and (min-width: 900px){
     li a{
-        color: $backgroundpositano;
+        color: $smallbackground;
+        font-size: 24px;
     }
     
 }
@@ -786,42 +885,76 @@ textarea:hover {
 
 
     /*index media*/
+
     @media only screen and (min-width: 900px){
         .mainframe{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgraynew;
             .maininside:hover{
-                border-color: $color1;
+                border-color: $color2;
             }
             .inner1{
-                padding: 120px;
+                height: 590px;
+                padding: 140px;
             }
             .inner2{
-                padding: 120px;
+                padding: 140px;
             }
             .inner3{
-                padding: 120px;
+                height: 590px;
+                padding: 140px;
             }
             .inner4{
-                padding: 120px;
+                padding: 140px;
+            }
+            .inner5{
+                padding: 140px;
+            }
+            .inner6{
+                padding: 140px;
+            }
+            .inner7{
+                padding: 140px;
+            }
+            .inner8{
+                padding: 140px;
             }
         }
     }
 
     @media screen and(max-width: 700px){
         .mainframe{
+            display: flex;
+            flex-direction: column;
             background-image: $positanogradient2;
+        }
+        .inner1{
+            padding: 30px;
+            height: 450px;
+            width: 100%;
+        }
+        .inner2{
+            height: 450px;
+            padding: 30px;
+            width: 100%;
+        }
+        .inner3{
+            height: 450px;
+            padding: 30px;
+            background-position: cover;
+            width: 100%;
+        }
+        .inner4{
+            height: 450px;
+            padding: 130px;
+            width: 100%;
         }
     }
     
     @media screen and(max-width: 500px){
         .mainframe{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgray;
             display: flex;
-            flex-grow: auto;
+            flex-grow: 1;
             flex-direction: column;
             background-position: cover;
         }
@@ -833,7 +966,7 @@ textarea:hover {
         }
         .inner3{
             padding: 130px;
-            background-position: bottom;
+            background-position: cover;
         }
         .inner4{
             padding: 130px;
@@ -841,17 +974,20 @@ textarea:hover {
     }
 
     @media screen and(max-width:320px){
+        .maininside{
+            margin: 0;
+        }
         .inner1{
-            padding: 120px;
+            padding: 150px;
         }
         .inner2{
-            padding: 120px;
+            padding: 150px;
         }
         .inner3{
-            padding: 120px;
+            padding: 150px;
         }
         .inner4{
-            padding: 120px;
+            padding: 150px;
         }
     }
 
@@ -859,9 +995,7 @@ textarea:hover {
 /* product media*/
     @media only screen and (min-width: 900px){
         .product-background{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgraynew;
         }
 }
 
@@ -876,9 +1010,7 @@ textarea:hover {
     
     @media screen and(max-width: 500px){
         .product-background{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgray;
             margin: 0px;
             padding: 0px;
             }
@@ -963,13 +1095,140 @@ textarea:hover {
             font-family: $positanofont;
         }
     }
+
+/*contact media*/
+
+@media only screen and(min-width:900px){
+    .contactcontainer{
+        background-image: $positanobackgroundgraynew;
+    }
+    .form{
+        box-shadow:0 0 40px -10px $color2;
+    }
+}
+
+@media only screen and(max-width:700px){
+    .form{
+        width:330px;
+        height:420px;
+        background:$backgroundtext;
+        border-radius:8px;
+        box-shadow:0 0 40px -10px $color2;
+        margin: auto;
+        padding:20px 30px;
+        max-width:calc(100vw - 40px);
+        box-sizing:border-box;
+        font-family: $positanofont;
+        position:relative;
+    }
+    
+    h2{
+        margin:10px 0;
+        padding-bottom:10px;
+        width:180px;
+        color: $color1;
+        border-bottom:3px solid $color2;
+    }
+    
+    input{
+        width:100%;
+        padding:10px;
+        box-sizing:border-box;
+        background:none;
+        outline:none;
+        resize:none;
+        border:0;
+        font-family:$positanofont;
+        transition:all .3s;
+        border-bottom:2px solid $color2;
+    }
+    
+    input:focus{
+        border-bottom:2px solid $color2;
+    }
+    
+    p:before{
+        content:attr(type);
+        display:block;
+        margin:28px 0 0;
+        font-size:14px;
+        color:$color1;
+    }
+    
+    button{
+        float:right;
+        padding:8px 12px;
+        margin:8px 0 0;
+        font-family:$positanofont;
+        border:2px solid $color2;
+        background:0;
+        color:$color2;
+        cursor:pointer;
+        transition:all .3s
+    }
+    
+    button:hover{
+        background:$backgroundpositano;
+        color: $color2;
+    }
+    
+    .contactcontainer{
+        background-image: $positanogradient1;
+    }
+    .contactcontainer{
+        background-image: $positanogradient2;
+    }
+}
+
+@media only screen and(max-width:500px){
+    .form{
+        background:$backgroundtext;
+        box-shadow:0 0 40px -10px $color2;
+    }
+    h2{
+        color: $color2;
+        border-bottom:3px solid $color2;
+    }
+    
+    input{
+        font-family:$positanofont;
+        transition:all .3s;
+        border-bottom:2px solid $color2;
+    }
+    
+    input:focus{
+        border-bottom:2px solid $color2;
+    }
+    
+    p:before{
+        color:$color2;
+    }
+    
+    button{
+        float:right;
+        padding:8px 12px;
+        margin:8px 0 0;
+        font-family: $positanofont;
+        border:2px solid $color2;
+    }
+    
+    button:hover{
+        background:$backgroundpositano;
+        color: $color2;
+    }
+    
+    .contactcontainer{
+        background-image: $positanobackgroundgray;
+    }
+}
+
+
+
 /*about media*/
 
 @media only screen and(min-width:900px){
     .maintext{
-        background-image: linear-gradient(to right,
-        #808080 100%, rgba(165, 17, 184, 0.185)
-        );
+        background-image: $positanobackgroundgraynew;
     }
 }
 
@@ -981,9 +1240,7 @@ textarea:hover {
 
 @media only screen and(max-width:500px){
     .maintext{
-        background-image: linear-gradient(to right,
-        #808080 100%, rgba(165, 17, 184, 0.185)
-        );
+        background-image: $positanobackgroundgray;
         display: block;
     }
     .pharagraph1{
@@ -1000,9 +1257,7 @@ textarea:hover {
 
 @media only screen and(max-width:318px){
     .maintext{
-        background-image: linear-gradient(to right,
-        #808080 100%, rgba(165, 17, 184, 0.185)
-        );
+        background-image: $positanobackgroundgray;
         display: block;
     }
     .pharagraph1{
@@ -1017,15 +1272,107 @@ textarea:hover {
     }
 }
 
+/*shopping media*/
+
+@media only screen and (min-width: 900px) {
+    .mainscreen{
+	min-height: 100vh;
+	width: 100%;
+    font-family: $positanofont;
+    background-image: $positanobackgroundgraynew;
+    color:$color2;
+    padding-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .mainscreen{
+	min-height: 100vh;
+	width: 100%;
+    font-family: $positanofont;
+    background-image: $positanogradient2;
+    color:$color2;
+    padding-left: 10%;
+    }
+    
+    .card {
+        width: 20rem;
+        margin: 1rem auto;
+        position:center;
+        align-self: center;
+        top: 20rem;
+        display:flex;
+        flex-direction: row;
+    }
+    
+    .rightside {
+        background-color: $backgroundtext;
+        width: 25rem;
+        padding: 2rem 1rem 1rem 1rem;
+        box-shadow:0 0 40px -10px $color2;
+    }
+    
+    p{
+        display:block;
+        font-size: 1.1rem;
+        font-weight: 200;
+        margin: .8rem 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .mainscreen{
+	min-height: 100vh;
+	width: 100%;
+    font-family: $positanofont;
+    background-image: $positanobackgroundgray;
+    color:$color2;
+    padding-left: 0;
+    }
+    
+    .card {
+        width: 20rem;
+        margin: 1rem auto;
+        position:center;
+        align-self: center;
+        top: 10rem;
+        display:flex;
+        flex-direction: row;
+    }
+    
+    .rightside {
+        background-color: $backgroundtext;
+        width: 20rem;
+        padding: 2rem 1rem 1rem 1rem;
+        box-shadow:0 0 40px -10px $color2;
+    }
+    
+    p{
+        display:block;
+        font-size: 1.1rem;
+        font-weight: 200;
+        margin: .8rem 0;
+    }
+}
+
+
+
 
 
 /*footer media*/
 
     @media only screen and (min-width: 900px){
         .under{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgraynew;
+        }
+        .social{
+            color:$color2;
+            padding: 50px;
+            font-size: 45px;
+        }
+        
+        .social:hover{
+            color: $color1;
         }
     }
 
@@ -1044,9 +1391,7 @@ textarea:hover {
 
     @media only screen and (max-width: 500px){
         .under{
-            background-image: linear-gradient(to right,
-            #808080 100%, rgba(165, 17, 184, 0.185)
-            );
+            background-image: $positanobackgroundgray;
         }
     }    
 
